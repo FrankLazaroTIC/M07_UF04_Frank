@@ -10,31 +10,19 @@
         <tr>
             <th>ID</th>
             <th>Nom</th>
-            <th>Cognom</th>
-            <th>Cognom2</th>
-            <th>Correu</th>
-            <th>Curs</th>
-            <th>Mòduls matriculats</th>
-            <th>
-        </tr>
+            <th>Cognoms</th>
+            <th>Assignatures</th>
+            <th>Rols</th>
+        </tr> 
+        {% for student in persones %}
         <tr>
-            <td>1</td>
-            <td>Frank</td>
-            <td>Student</td>
-            <td><a href="#">+ INFO</a></td>
+            <td>{{ student.id }}</td>
+            <td>{{ student.nom }}</td>
+            <td>{{ student.cognoms }}</td>
+            <td>{{ student.assignatures }}</td>
+            <td>{{ student.rol }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Lázaro</td>
-            <td>Student</td>
-            <td><a href="#">+ INFO</a></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Vargas</td>
-            <td>Student</td>
-            <td><a href="#">+ INFO</a></td>
-        </tr>
+        {% endfor %}
     </table>
 </body>
 </html>

@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <body>
+            {% for person in persons %}
+            <tr>
+                <td>{{ person.id }}</td>
+                <td>{{ person.nom }}</td>
+                <td>{{ person.cognoms }}</td>
+                <td>{{ person.assignatures }}</td>
+                <td>{{ person.rol }}</td>
+                <td><a href="{% url 'updateUser' person.id %}">Edit</a></td>
+        </body>
+    </head>
+</hmtl>

@@ -10,36 +10,19 @@
         <tr>
             <th>ID</th>
             <th>Nom</th>
-            <th>Cognom</th>
-            <th>Cognom 2</th>
-            <th>Correu</th>
-            <th>Curs</th>
-            <th>Mòduls</th>
+            <th>Cognoms</th>
+            <th>Assignatures</th>
+            <th>Rol</th>
         </tr>
+        {% for prof in professors %}
         <tr>
-            <td>1</td>
-            <td>Roger</td>
-            <td>Sobrino</td>
-            <td>39</td>
-            <td>teacher</td>
-            <td>DAM2B, DAW2A</td>
+            <td>{{ prof.id }}</td>
+            <td>{{ prof.nom }}</td>
+            <td>{{ prof.cognoms }}</td>
+            <td>{{ prof.assignatures }}</td>
+            <td>{{ prof.rol }}</td>
         </tr>
-        <tr>
-            <td>2</td>
-            <td>Josep Oriol</td>
-            <td>Roca</td>
-            <td>25</td>
-            <td>teacher</td>
-            <td>DAM2B, DAW2A, DAW1A</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Juanma</td>
-            <td>Biel</td>
-            <td>24</td>
-            <td>teacher</td>
-            <td>DAM2B, DAW2A</td>
-        </tr>
+        {% endfor %}
     </table>
 </body>
 </html>

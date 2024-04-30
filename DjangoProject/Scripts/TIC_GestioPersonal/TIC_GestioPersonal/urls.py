@@ -5,7 +5,8 @@ from centre import views # type: ignore
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('centre/teachers', views.teachers, name='teachers'),
-    path('centre/students', views.students, name='students'),
+    path('centre/teachers', views.llistarProfessors, name='teachers'),
+    path('centre/students', views.llistarUsers, name='students'),
     path('centre/form', views.form, name='form'),
+    path('centre/update/<int:id>', views.updateUser, name='updateUser'),
 ]
