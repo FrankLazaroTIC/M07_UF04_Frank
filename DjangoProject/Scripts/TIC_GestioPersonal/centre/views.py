@@ -49,3 +49,20 @@ def updateUser(request, id):
             return redirect('/')
     context = {'form': form}
     return render(request, 'form.html', context)
+
+def llistarUsersIndex(request):
+    persones = list(UsersTIC.objects.all())
+    students = []
+    context = {'students': students}
+    for p in persones:
+        if p.rol == 'Student' or p.rol == 'student':
+            students.append(p)
+    return render(request, 'index.html', context)
+
+def deleteUser(request, id):
+    persona = UsersTIC.objects.get(id=id)
+    if request.method == 'POST':
+        persona.delete()
+        return redirect('/')
+    context = {'persona': persona}
+    return render(request, 'deleteUser.html', context)

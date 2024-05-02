@@ -1,0 +1,11 @@
+{% block content %}
+
+    <h1>Eliminar usuari</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Estàs segur que vols eliminar l'usuari {{ user.nom }}?</p>
+        <input type="submit" value="Eliminar">
+        <button><a href="http://localhost:8000/"> Home</a></button>
+    </form>
+
+    {% endblock %}
